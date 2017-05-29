@@ -14,8 +14,18 @@
                 },
                 'slow');
         });
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();
+        }
+// ]]>
     </script>
     <style>
+        div#content {
+            display: none;
+        }
+
+
         h1 {
             text-shadow: 0px 0px 10px #000000;
         }
@@ -60,7 +70,7 @@
 
                         <br>
                         <br>
-                        <button class='btn btn-conf btn-green left' name="my-form" type="submit">Búsqueda de
+                        <button class='btn btn-conf btn-green left' name="my-form" type="submit" onclick="loading();">Búsqueda de
                             películas!
                         </button>
                     </form>
@@ -82,12 +92,11 @@
 
         {% endfor %}
         {% if True %}
-<script>
-    $(function() {
-      document.getElementById('ano').scrollIntoView();
-    });
-</script>
-{% endif %}
+            <script>
+                window.location.href='#imagenes';
+            </script>
+        {% endif %}
+    <div id="content">your html content here......</div>
     </div><!--/row-->
 
 </div><!--/g-->
